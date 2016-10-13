@@ -6,16 +6,14 @@ public class String8086
 	
 	public String8086(String theString)
 	{
-		
-		this.storedString = new char[theString.length() + 1];
-		
+		this.storedString = new char[64];
 		for(int i = 0; i <= theString.length(); i++)
 		{
-			if(i == theString.length()) // Last index in the array. Store the dollar sign.
+			if(i == theString.length()) // Last index to fill in the array. Store the dollar sign.
 			{
 				this.storedString[i] = '$';
 			}
-			else // Not the last index in the array. Store a character.
+			else // Not the last index to fill in the array. Store a character.
 			{
 				this.storedString[i] = theString.charAt(i);
 			}
